@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.726,C:\Users\milas\Documents\Embarcadero\Studio\Projects\когда я стану счастливым\Unit1.pas=C:\Users\milas\Documents\Embarcadero\Studio\Projects\когда я стану счастливым\main.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.006,C:\Users\milas\Documents\Embarcadero\Studio\Projects\когда я стану счастливым\Unit2.dfm=C:\Users\milas\Documents\Embarcadero\Studio\Projects\когда я стану счастливым\bestiari.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.241,=C:\Users\milas\Documents\Embarcadero\Studio\Projects\когда я стану счастливым\Unit6.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.892,C:\Users\milas\Documents\Embarcadero\Studio\Projects\Unit2.pas=C:\Users\milas\Documents\Embarcadero\Studio\Projects\когда я стану счастливым\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.892,C:\Users\milas\Documents\Embarcadero\Studio\Projects\Unit2.dfm=C:\Users\milas\Documents\Embarcadero\Studio\Projects\когда я стану счастливым\Unit2.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.044,=C:\Users\milas\Documents\Embarcadero\Studio\Projects\когда я стану счастливым\Unit7.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.573,C:\Users\milas\Documents\Embarcadero\Studio\Projects\когда я стану счастливым\Unit7.pas=</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.726,C:\Users\milas\Documents\Embarcadero\Studio\Projects\когда я стану счастливым\Unit1.dfm=C:\Users\milas\Documents\Embarcadero\Studio\Projects\когда я стану счастливым\main.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.700,C:\Users\milas\Documents\Embarcadero\Studio\Projects\который раз я создаю папку с курсачом и делаю его заново я уже устала когда же я стану счатливой я просто хочу играть всё время в генш и ничего не делать\Supernatural.dproj=C:\Users\milas\Documents\Embarcadero\Studio\Projects\когда я стану счастливым\Project1.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.726,=C:\Users\milas\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.449,=C:\Users\milas\Documents\Embarcadero\Studio\Projects\когда я стану счастливым\Unit3.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.090,C:\Users\milas\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\milas\Documents\Embarcadero\Studio\Projects\когда я стану счастливым\Project1.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.006,C:\Users\milas\Documents\Embarcadero\Studio\Projects\когда я стану счастливым\Unit2.pas=C:\Users\milas\Documents\Embarcadero\Studio\Projects\когда я стану счастливым\bestiari.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.867,C:\Users\milas\Documents\Embarcadero\Studio\Projects\блять\Supernatural.dproj=C:\Users\milas\Documents\Embarcadero\Studio\Projects\который раз я создаю папку с курсачом и делаю его заново я уже устала когда же я стану счатливой я просто хочу играть всё время в генш и ничего не делать\Supernatural.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.093,=C:\Users\milas\Documents\Embarcadero\Studio\Projects\когда я стану счастливым\Unit5.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.080,C:\Users\milas\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\milas\Documents\Embarcadero\Studio\Projects\когда я стану счастливым\Unit1.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.754,=C:\Users\milas\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.080,C:\Users\milas\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\milas\Documents\Embarcadero\Studio\Projects\когда я стану счастливым\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.769,=C:\Users\milas\Documents\Embarcadero\Studio\Projects\когда я стану счастливым\Unit4.pas</Transaction>
+  </Transactions>
+	<ProjectSortOrder AutoSort="0" SortType="0">
+    <File Path="Unit1.pas"/>
+    <File Path="Unit1.dfm"/>
+    <File Path="Unit2.pas"/>
+    <File Path="Unit2.dfm"/>
+    <File Path="Unit3.pas"/>
+    <File Path="Unit3.dfm"/>
+    <File Path="Unit4.pas"/>
+    <File Path="Unit4.dfm"/>
+    <File Path="Unit5.pas"/>
+    <File Path="Unit5.dfm"/>
+    <File Path="Unit6.pas"/>
+    <File Path="Unit6.dfm"/>
+  </ProjectSortOrder>
+</BorlandProject>

@@ -1,0 +1,53 @@
+unit Unit3;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus, Vcl.OleCtrls, SHDocVw;
+
+type
+  TForm3 = class(TForm)
+    MainMenu1: TMainMenu;
+    N1: TMenuItem;
+    WebBrowser1: TWebBrowser;
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure FormCreate(Sender: TObject);
+    procedure N1Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form3: TForm3;
+
+implementation
+
+{$R *.dfm}
+
+uses Unit1;
+
+procedure TForm3.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+Application.Terminate;       //Закрытие программы
+end;
+                              //Связываем форму с файлом *.html
+
+
+                         //Переход на форму  Главного меню
+
+procedure TForm3.FormCreate(Sender: TObject);
+begin
+webbrowser1.Navigate('file://'+ExtractFilePath(paramstr(0))+'resources/о сериале/0.html')  ;
+screen.MenuFont.name:='DS Greece';
+end;
+
+procedure TForm3.N1Click(Sender: TObject);
+begin
+ Form1.Show;           //Переход на форму с Главным меню
+ Form3.Hide;
+end;
+
+end.

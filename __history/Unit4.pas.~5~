@@ -1,0 +1,145 @@
+﻿unit Unit4;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls, Vcl.Menus,
+  Vcl.MPlayer;
+
+type
+  TForm4 = class(TForm)
+    ScrollBox1: TScrollBox;
+    Image1: TImage;
+    Image2: TImage;
+    RadioGroup1: TRadioGroup;
+    Label2: TLabel;
+    Label1: TLabel;
+    Image3: TImage;
+    MainMenu1: TMainMenu;
+    N1: TMenuItem;
+    N2: TMenuItem;
+    RadioGroup2: TRadioGroup;
+    RadioGroup3: TRadioGroup;
+    MediaPlayer2: TMediaPlayer;
+    RadioGroup4: TRadioGroup;
+    RadioGroup5: TRadioGroup;
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure FormCreate(Sender: TObject);
+    procedure Image2Click(Sender: TObject);
+    procedure Image1Click(Sender: TObject);
+    procedure Image3Click(Sender: TObject);
+    procedure N1Click(Sender: TObject);
+    procedure MediaPlayer2Click(Sender: TObject; Button: TMPBtnType;
+      var DoDefault: Boolean);
+    procedure ScrollBox1MouseWheel(Sender: TObject; Shift: TShiftState;
+      WheelDelta: Integer; MousePos: TPoint; var Handled: Boolean);
+
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form4: TForm4;
+  ball:integer;                  //переменная хранящая количество баллов
+  otv:array[1..10]of byte=(0,2,0,1,2);   //создание массива ответов
+implementation
+
+{$R *.dfm}
+
+uses Unit1;
+
+procedure TForm4.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+Application.Terminate;  //Закрытие программы
+end;
+
+
+procedure TForm4.FormCreate(Sender: TObject);   //Связь с файлами, подключение и настройка медиаплеера
+begin
+image1.Picture.LoadFromFile('resources/cartinki i knopki/проверить.jpg');
+image2.Picture.LoadFromFile('resources/cartinki i knopki/очистить.jpg');
+image3.Picture.LoadFromFile('resources/cartinki i knopki/начать тест.jpg');
+MediaPlayer2.FileName:=  'resources/cartinki i knopki/аудирование 1.mp3';
+ MediaPlayer2.DeviceType:=dtAutoSelect;
+MediaPlayer2.Open;
+screen.MenuFont.name:='DS Greece';
+end;
+
+procedure TForm4.Image1Click(Sender: TObject);         //Проверка результатов теста
+begin
+ ball:=0;
+   ball:=0;
+ if radiogroup1.ItemIndex=otv[1] then inc(ball);
+ if radiogroup2.ItemIndex=otv[2] then inc(ball);
+ if radiogroup3.ItemIndex=otv[3] then inc(ball);
+ if radiogroup4.ItemIndex=otv[4] then inc(ball);
+ if radiogroup5.ItemIndex=otv[5] then inc(ball);
+ if radiogroup6.ItemIndex=otv[6] then inc(ball);
+ if radiogroup7.ItemIndex=otv[7] then inc(ball);
+ if radiogroup8.ItemIndex=otv[8] then inc(ball);
+ if radiogroup9.ItemIndex=otv[9] then inc(ball);
+ if radiogroup10.ItemIndex=otv[10] then inc(ball);
+ label1.caption:='Вы правильно ответили на '+IntToStr(ball)+' из 10-ти вопросов.';
+ if ball=10
+ then  label2.caption:='Поздравляю! Вы набрали максимальный балл, так держать!'
+ else
+   if (ball=9) or (ball=8)
+   then label2.caption:='Неплохой результат.'
+   else
+      if(ball=7) or (ball=6)
+    then label2.caption:='Могло бы быть и лучше.'
+    else     label2.caption:='Очень плохо...'
+
+ end;
+
+procedure TForm4.Image2Click(Sender: TObject);     //Очищение ответов
+begin
+ label1.caption:='';
+ label2.caption:='';
+ radiogroup1.itemIndex:=-1;
+ radiogroup2.itemIndex:=-1;
+ radiogroup3.itemIndex:=-1;
+ radiogroup4.itemIndex:=-1;
+ radiogroup5.itemIndex:=-1;
+ if radiogroup6.ItemIndex=-1
+ if radiogroup7.ItemIndex=-1
+ if radiogroup8.ItemIndex=-1
+ if radiogroup9.ItemIndex=-1
+ if radiogroup10.ItemIndex=-1
+
+end;
+
+procedure TForm4.Image3Click(Sender: TObject);      //Кнопка с началом теста
+begin
+image1.Visible:=True;
+image2.Visible:=True;
+image3.Visible:=False;
+  Scrollbox1.Visible:=True;
+end;
+
+procedure TForm4.MediaPlayer2Click(Sender: TObject; Button: TMPBtnType;
+  var DoDefault: Boolean);    // старт аудиодорожки
+begin
+MediaPlayer2.Start;
+end;
+
+procedure TForm4.N1Click(Sender: TObject);
+begin
+form4.hide;                 //Переход на форму Главного меню
+form1.show;
+mediaplayer2.stop;
+end;
+
+
+procedure TForm4.ScrollBox1MouseWheel(Sender: TObject; Shift: TShiftState;
+  WheelDelta: Integer; MousePos: TPoint; var Handled: Boolean); //Прокрутка Srollbox с помощью мыши
+begin
+  with ScrollBox1.VertScrollBar do
+   Position := Position - WheelDelta div 4;
+ Handled := True;
+end;
+
+end.

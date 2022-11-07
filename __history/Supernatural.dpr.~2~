@@ -1,0 +1,31 @@
+program Supernatural;
+
+uses
+  Vcl.Forms,
+  Unit1 in '..\когда я стану счастливым\Unit1.pas' {Form1},
+  Unit2 in '..\когда я стану счастливым\Unit2.pas' {Form2},
+  Unit3 in '..\когда я стану счастливым\Unit3.pas' {Form3},
+  Unit4 in '..\когда я стану счастливым\Unit4.pas' {Form4},
+  Unit5 in '..\когда я стану счастливым\Unit5.pas' {Form5},
+  Unit6 in '..\когда я стану счастливым\Unit6.pas' {Form6};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+
+  Form6 := TForm6.Create(Application);
+  Form6.Show;
+  Form6.Update;
+   while Form6.Timer1.Enabled do
+    Application.ProcessMessages;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TForm1, Form1);
+  Application.CreateForm(TForm2, Form2);
+  Application.CreateForm(TForm3, Form3);
+  Application.CreateForm(TForm4, Form4);
+  Application.CreateForm(TForm5, Form5);
+  Form6.Hide;
+  Form6.Free;
+  Application.Run;
+end.
